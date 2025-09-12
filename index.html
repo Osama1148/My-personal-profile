@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Profile</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4a90e2, #0072ff);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #fff;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* Section Containers */
+    main section, aside, #contact {
+      margin: 40px auto;
+      max-width: 900px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0072ff;
+      border-left: 5px solid #4a90e2;
+      padding-left: 10px;
+    }
+
+    /* About */
+    #about img {
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+      border: 5px solid #0072ff;
+      width: 180px;
+    }
+
+    #about p {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* Skills */
+    #skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+    }
+
+    #skills li {
+      background: #0072ff;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: transform 0.3s;
+    }
+
+    #skills li:hover {
+      transform: scale(1.1);
+      background: #4a90e2;
+    }
+
+    /* Portfolio */
+    article {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    article:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    article h3 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* Sidebar */
+    aside {
+      background: #eaf3ff;
+      border-left: 6px solid #0072ff;
+      font-style: italic;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #0072ff;
+      box-shadow: 0 0 5px rgba(0,114,255,0.3);
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      background: linear-gradient(135deg, #0072ff, #4a90e2);
+      color: #fff;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #005fcc, #357ab8);
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      margin-top: 40px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      #skills ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Muhammad Osama Nisar</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="pfp.jpg" alt="Profile picture of Muhammad Osama Nisar">
+      <p>Hello! My name is <strong>Muhammad Osama Nisar</strong>. I am a  
+         <em>Student doing my Bachelors in IT . </em> I create modern, user-friendly websites and apps.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <ul>
+        <li>HTML5 &amp; CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>Python</li>
+        <li>Firebase</li>
+        <li>UI/UX Design</li>
+      </ul>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <article>
+        <h3>Project 1: Personal Profile Webpage</h3>
+        <p>A responsive personal profile webpage built with HTML and CSS. 
+           It allows users to read and comment on articles in an elegant interface.</p>
+      </article>
+      <article>
+        <h3>Project 2: DentalFlow App</h3>
+        <p>A Dentist app built using React.js and Firebase. 
+           It helps users choose their treatments and book appointment with the dentist.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Sidebar -->
+  <aside>
+    <h2>Quick Info</h2>
+    <p>"Code is like humor. When you have to explain it, it’s bad."</p>
+    <p>Favorite Quote: <em>“Stay hungry, stay foolish.”</em></p>
+  </aside>
+
+  <!-- Contact Form -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Muhammad Osama | muhammadosamanisar@gmail.com</p>
+  </footer>
+
+</body>
+</html>
